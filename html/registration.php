@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('db_connect.php');
+?>
 <style>
 
                                 body {font-family: Arial, Helvetica, sans-serif;}
@@ -144,22 +145,11 @@
 <![endif]-->
 </head>
 
-<body class="fix-header">
-    <!-- ============================================================== -->
-    <!-- Preloader -->
-    <!-- ============================================================== -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
             <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
         </svg>
     </div>
-    <!-- ============================================================== -->
-    <!-- Wrapper -->
-    <!-- ============================================================== -->
-    <!--div id="wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
 
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
@@ -171,19 +161,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-header -->
-            <!-- /.navbar-top-links -->
-            <!-- /.navbar-static-side -->
         </nav>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+       
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
-                <div class="sidebar-head">
-                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
-                </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
                         <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Registration</a>
@@ -199,12 +180,8 @@
             </div>
             
         </div>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page Content -->
-        <!-- ============================================================== -->
+
+
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
@@ -230,7 +207,7 @@
                         <div class="white-box">
                             <div class="row">
                                 <div class="pull-left"><h3><b>New Member As of :</b></h3></div>
-                                <div class="pull-right"><a href="" target="_blank" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
+                                <div class="pull-right"><a href="" data-target="addmember" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
                             </div>
 
                             
@@ -273,15 +250,8 @@
             <!-- /.container-fluid -->
             <footer class="footer text-center"> 2018 &copy; Saint Louis University </footer>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page Content -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
+        <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -304,6 +274,3 @@
     <script src="js/custom.min.js"></script>
     <script src="js/dashboard1.js"></script>
     <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-</body>
-
-</html>
