@@ -1,7 +1,7 @@
 <!--<?php
 //include('db_connect.php');
 ?>-->
-<style>
+                            <style>
 
                                 body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
@@ -15,103 +15,15 @@
                                     background: #f1f1f1;
                                 }
 
-                                /* Add a background color when the inputs get focus */
-                                input[type=text]:focus, input[type=password]:focus {
-                                    background-color: #ddd;
-                                    outline: none;
-                                }
-
-                                /* Set a style for all buttons */
-                                button {
-                                    background-color: #4CAF50;
-                                    color: white;
-                                    padding: 3px 20px;
-                                    margin: 1px 0;
-                                    border: none;
-                                    cursor: pointer;
-                                    width: 100%;
-                                    opacity: 0.9;
-                                }
-
-                                button:hover {
-                                    opacity:1;
-                                }
-
-                                /* Extra styles for the cancel button */
-                                .cancelbtn {
-                                    padding: 3px 20px;
-                                    background-color: #f44336;
-                                }
-
-                                /* Float cancel and signup buttons and add an equal width */
-                                .cancelbtn, .signupbtn {
-                                  float: left;
-                                  width: 50%;
-                                }
-
+                                
                                 /* Add padding to container elements */
                                 .container {
                                     padding: 16px;
                                 }
 
-                                /* The Modal (background) */
-                                .modal {
-                                    display: none; /* Hidden by default */
-                                    position: fixed; /* Stay in place */
-                                    z-index: 1; /* Sit on top */
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%; /* Full width */
-                                    height: 100%; /* Full height */
-                                    overflow: auto; /* Enable scroll if needed */
-                                    background-color: #474e5d;
-                                    padding-top: 50px;
-                                }
-
-                                /* Modal Content/Box */
-                                .modal-content {
-                                    background-color: #fefefe;
-                                    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-                                    border: 1px solid #888;
-                                    width: 80%; /* Could be more or less, depending on screen size */
-                                }
-
-                                /* Style the horizontal ruler */
-                                hr {
-                                    border: 1px solid #f1f1f1;
-                                    margin-bottom: 25px;
-                                }
-                                 
-                                /* The Close Button (x) */
-                                .close {
-                                    position: absolute;
-                                    right: 35px;
-                                    top: 15px;
-                                    font-size: 40px;
-                                    font-weight: bold;
-                                    color: #f1f1f1;
-                                }
-
-                                .close:hover,
-                                .close:focus {
-                                    color: #f44336;
-                                    cursor: pointer;
-                                }
-
-                                /* Clear floats */
-                                .clearfix::after {
-                                    content: "";
-                                    clear: both;
-                                    display: table;
-                                }
-
-                                /* Change styles for cancel button and signup button on extra small screens */
-                                @media screen and (max-width: 300px) {
-                                    .cancelbtn, .signupbtn {
-                                       width: 100%;
-                                    }
-                                }
                                 </style>
+
+                        
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -145,6 +57,41 @@
 <![endif]-->
 </head> 
 
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <!--div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== --><<<<<<< .mine
+
+
+
+
+
+
+
+
+
+
+
+=======
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <!--div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+
+>>>>>>> .theirs
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
                 <!-- /Logo -->
@@ -155,27 +102,40 @@
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
         </nav>
-       
+        <!-- End Top Navigation -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Registration</a>
+                        <a href="registration.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Registration</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Membership List</a>
+                        <a href="membership.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Membership List</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Notifications</a>
+                        <a href="notifications.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Notifications</a>
                     </li>
 
                 </ul>
             </div>
             
         </div>
-
-
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
@@ -204,11 +164,15 @@
                     mysql_select_db('maabprc');
                     $retval = mysql_query($sql, $conn);
                 ?>
-                <div class="row">
+
+
+                <!--div class="row"-->
                         <div class="white-box">
+
+
                             <div class="row">
                                 <div class="pull-left"><h3><b>New Member As of :</b></h3></div>
-                                <div class="pull-right"><a href="" data-target="addmember" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
+                                <div class="pull-right"><a href="" target="_blank" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
                             </div>
 
                             <?php
@@ -232,8 +196,6 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                            </td>
                                             <td><?php echo $project['orNumber']; ?></td>
                                             <td><?php echo $project['IDNumber']; ?></td>
                                             <td><?php echo $project['lastName']; ?></td>
@@ -243,6 +205,7 @@
                                             <td><?php echo $project['contactNumber']; ?></td>
                                             <td><?php echo $project['validDate']; ?></td>
                                             <td><?php echo $project['expiryDate']; ?></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                               </table>
@@ -257,8 +220,15 @@
             <!-- /.container-fluid -->
             <footer class="footer text-center"> 2018 &copy; Saint Louis University </footer>
         </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
     </div>
-        <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
