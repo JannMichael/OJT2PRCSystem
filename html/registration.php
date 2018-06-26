@@ -1,6 +1,6 @@
-<?php
-include('db_connect.php');
-?>
+<!--<?php
+//include('db_connect.php');
+?>-->
 <style>
 
                                 body {font-family: Arial, Helvetica, sans-serif;}
@@ -143,13 +143,7 @@ include('db_connect.php');
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-</head>
-
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-        </svg>
-    </div>
+</head> 
 
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
@@ -200,9 +194,16 @@ include('db_connect.php');
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
-                
-                <!-- table -->
-                <!-- ============================================================== -->
+                <?php
+                    $conn = mysql_connect('localhost', 'root', '');
+
+                    if(!$conn){
+                        die('Could Not connect: ' . mysql_error());
+                    }
+                    $sql="SELECT orNum, IDNumber, lastName, firstName, middleName, address, contactNumber, validDate, expiryDate FROM maablist";
+                    mysql_select_db('maabprc');
+                    $retval = mysql_query($sql, $conn);
+                ?>
                 <div class="row">
                         <div class="white-box">
                             <div class="row">
@@ -210,7 +211,10 @@ include('db_connect.php');
                                 <div class="pull-right"><a href="" data-target="addmember" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
                             </div>
 
-                            
+                            <?php
+                            $projects = array();
+                            while ($project =  mysql_fetch_assoc($retval)) {?>
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -230,18 +234,21 @@ include('db_connect.php');
                                         <tr>
                                             <td>
                                             </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><?php echo $project['orNumber']; ?></td>
+                                            <td><?php echo $project['IDNumber']; ?></td>
+                                            <td><?php echo $project['lastName']; ?></td>
+                                            <td><?php echo $project['firstName']; ?></td>
+                                            <td><?php echo $project['middleName']; ?></td>
+                                            <td><?php echo $project['address']; ?></td>
+                                            <td><?php echo $project['contactNumber']; ?></td>
+                                            <td><?php echo $project['validDate']; ?></td>
+                                            <td><?php echo $project['expiryDate']; ?></td>
                                         </tr>
                                     </tbody>
                               </table>
+                              <?php
+    }
+?>
                           </div>
                         </div>
                     </div>
