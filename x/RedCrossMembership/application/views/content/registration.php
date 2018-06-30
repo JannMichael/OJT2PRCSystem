@@ -48,7 +48,6 @@
     <link href="<?php echo base_url('assets/css/bootstrap.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
 </script>
-<![endif]-->
 </head>
 
 <body class="fix-header">
@@ -139,9 +138,9 @@
                                 <div class="pull-right"><a href="" target="_blank" class="btn btn-info  m-l-20 hidden-xs hidden-sm waves-effect waves-light">Sign-Up New Member</a></div>
                             </div>
 
-                            
-                            <div class="table-responsive">
-                                <table class="table">
+                            <div class="box-body">
+          <div class="table table-responsive">
+            <table id="adminTable" class="table table-bordered table-condensed table-hover">
                                     <thead>
                                         <tr>
                                             <th>OR NUMBER</th>
@@ -156,27 +155,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($register as $registration){?>
+                                        <?php
+                                        if(!empty($results)){
+                                         foreach($results as $reg){?>
                                         <tr>
-                                            <td><?php echo $registration->orNumber?></td>
-                                            <td><?php echo $registration->IDNumber?></td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><?php echo $reg['orNumber']?></td>
+                                            <td><?php echo $reg['IDNumber']?></td>
+                                            <td><?php echo $reg['lastName']?></td>
+                                            <td><?php echo $reg['firstName']?></td>
+                                            <td><?php echo $reg['middleName']?></td>
+                                            <td><?php echo $reg['address']?></td>
+                                            <td><?php echo $reg['contactNumber']?></td>
+                                            <td><?php echo $reg['validDate']?></td>
+                                            <td><?php echo $reg['expiryDate']?></td>
                                         </tr>
-                                    <?php }?>
+                                    <?php 
+                                } 
+                            }?>
                                     </tbody>
                               </table>
                           </div>
+                      </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- /.container-fluid -->
             <footer class="footer text-center"> 2018 &copy; Saint Louis University </footer>
         </div>

@@ -4,14 +4,12 @@
 		public function __construct()
 		{
 			parent::__construct();
-			$this->load->helper('url');
-			$this->load->database();
-			$this->load->model('mod/registration_model.php');
+			$this->load->model('registration_model');
 		}
 
 		public function index(){
-			$this->data['Registration'] = $this->registration_model->getReg();
-			$this->load->view('content/registration.php');
+			$data['register']=$this->registration_model->getReg();
+			$this->load->view('content/registration.php', $data);
 
 		}
 	}

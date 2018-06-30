@@ -1,15 +1,15 @@
-<? 
+<?php
 	class Registration_model extends CI_Model {
-		
-		public function __construct()
-        {
-            parent::__construct();
-        }
 
 		public function getReg(){
-		$this->db->select("orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate,expiryDate");
+		$result = array();
+		$this->db->select('orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate');
 		$this->db->from('maablist');
 		$query = $this->db->get();
-		return $query->result();
+		if($query->num_rows() >0){
+			$results = $query->result();
+		}
+		return $results;
 		}
 	}
+?>
