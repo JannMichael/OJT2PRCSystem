@@ -1,7 +1,7 @@
 <?php
 	require 'fragments/db.php';
 
-	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate, expiryDate FROM maablist WHERE validDate=CURDATE() ORDER BY validDate';
+	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate, expiryDate FROM maablist ORDER BY validDate LIMIT 10';
     $result = mysqli_query($db, $query);
 
     $members = [];
